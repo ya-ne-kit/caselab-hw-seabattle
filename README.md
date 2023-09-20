@@ -12,15 +12,15 @@
 
 Игрок 1:
 
-<img src="https://github.com/ya-ne-kit/caselab-hw-seasweeper/assets/111566347/84b9eea6-cecc-4e27-ae55-2c50f7d3b9b2" width=20% height=20%>
+<img src="https://github.com/ya-ne-kit/caselab-hw-seabattle/assets/111566347/43d192d8-5e1e-42ff-87bd-3e2277047f1e" width=20% height=20%>
 
 Игрок 2:
 
-<img src="https://github.com/ya-ne-kit/caselab-hw-seasweeper/assets/111566347/5599fae1-7a79-4175-a185-24b344a9b9b2" width=20% height=20%>
+<img src="https://github.com/ya-ne-kit/caselab-hw-seabattle/assets/111566347/24f65b27-4a41-4988-a199-ca19383d0f25" width=20% height=20%>
 
 Пример промежуточного результата сражения:
 
-<img src="https://github.com/ya-ne-kit/caselab-hw-seasweeper/assets/111566347/9261e045-f273-4873-9b1e-2ed9e78e876e" width=20% height=20%>
+<img src="https://github.com/ya-ne-kit/caselab-hw-seabattle/assets/111566347/2ea034b4-3e50-4753-aa7b-5c4c6ca220e9" width=20% height=20%>
 
 Показанной расстановке кораблей соответствует следующий консольный ввод (после ввода имен игроков для воспроизведения расстановки): 
 0 0
