@@ -14,12 +14,12 @@ public class Seabattle {
 
     private final Scanner s = new Scanner(System.in);
 
-    public void setPlayer1() {
+    private void setPlayer1() {
         System.out.print("Введите имя первого игрока: ");
         this.player1 = s.nextLine();
     }
 
-    public void setPlayer2() {
+    private void setPlayer2() {
         System.out.print("Введите имя второго игрока: ");
         player2 = s.nextLine();
     }
@@ -50,7 +50,7 @@ public class Seabattle {
     }
 
     // метод заполнения поля игрока
-    public void fillFieldPlayer(int[][] battleField) {
+    private void fillFieldPlayer(int[][] battleField) {
         for (int h = 4; h > 0; h--) {
             for (int i = 0; i < 5 - h; i++) {
                 Ship tmpShip = null;
@@ -71,7 +71,7 @@ public class Seabattle {
     }
 
     // получаем у пользователя координаты корабля
-    public Ship getShip(int n) {
+    private Ship getShip(int n) {
         System.out.printf("Введите через пробел координаты первой ячейки, занимаемой %d-палубным кораблем: ", n);
         int y = s.nextInt();
         int x = s.nextInt();
@@ -88,7 +88,7 @@ public class Seabattle {
     }
 
     // ставим корабль на поле
-    public void fillShip(Ship ship, int[][] battleField) {
+    private void fillShip(Ship ship, int[][] battleField) {
         if (ship.getKurs() == 2) {
             for (int i = ship.getX(); i < ship.getX() + ship.getN(); i++) {
                 battleField[i][ship.getY()] = ship.getN();
@@ -101,7 +101,7 @@ public class Seabattle {
     }
 
     // проверяем - пустое ли место
-    public boolean isPlaceAvailable(Ship ship, int[][] battleField) {
+    private boolean isPlaceAvailable(Ship ship, int[][] battleField) {
         int x1 = ship.getX() - 1 < 0 ? 0 : ship.getX() - 1;
         int y1 = ship.getY() - 1 < 0 ? 0 : ship.getY() - 1;
         int x2 = 0;
@@ -122,7 +122,7 @@ public class Seabattle {
     }
 
     // отображаем поле оппонента (скрыты корабли)
-    public void displayOpponentBattleField(int[][] battleField) {
+    private void displayOpponentBattleField(int[][] battleField) {
         System.out.println("--------------------------");
         System.out.println(COORD_LINE);
         for (int i = 0; i < battleField.length; i++) {
@@ -138,7 +138,7 @@ public class Seabattle {
     }
 
     // отображаем свое поле (видно всё)
-    public void displayOwnerBattleField(int[][] battleField) {
+    private void displayOwnerBattleField(int[][] battleField) {
         System.out.println("--------------------------");
         System.out.println(COORD_LINE);
         for (int i = 0; i < battleField.length; i++) {
@@ -154,7 +154,7 @@ public class Seabattle {
     }
 
     // промежуточный метод шутинга - реализация повтора удара при успехе предыдущего
-    public void shooting() {
+    private void shooting() {
         int result = 1;
         while (result == 1) {
             result = shoot(player1, battleFieldPlayer2);
@@ -177,7 +177,7 @@ public class Seabattle {
     }
 
     // тело действия - удара по цели
-    public int shoot(String player, int[][] battleField) {
+    private int shoot(String player, int[][] battleField) {
         System.out.printf("%s, введи координаты через пробел, куда бить: ", player);
         int y = s.nextInt();
         int x = s.nextInt();
@@ -201,7 +201,7 @@ public class Seabattle {
     }
 
     // получение текущего счета
-    public int getScore(int[][] battleField) {
+    private int getScore(int[][] battleField) {
         int count = 0;
         for (int[] ints : battleField) {
             for (int j = 0; j < battleField.length; j++) {
